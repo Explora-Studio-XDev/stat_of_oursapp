@@ -1,0 +1,102 @@
+{
+  "info": {
+    "_postman_id": "1f0f1d0d-48af-451c-8a77-f8fcda4de9e5",
+    "name": "STATS D'UTILISATION",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49750144",
+    "_collection_link": "https://go.postman.co/collection/49750144-1f0f1d0d-48af-451c-8a77-f8fcda4de9e5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1-utilisation commencer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user_id\": \"user_001\",\r\n  \"country\": \"CI\",\r\n  \"latitude\": 5.345,\r\n  \"longitude\": -4.024,\r\n  \"device_brand\": \"Samsung\",\r\n  \"device_model\": \"Galaxy A12\",\r\n  \"os_version\": \"Android 13\",\r\n  \"platform\": \"android\",\r\n  \"app_version\": \"1.0.0\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/usage/start",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "usage",
+            "start"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2 - arrêt d'utilisation",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"usage_id\": \"1302a661-7634-48a9-8957-39e9c6e2426d\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/usage/stop",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "usage",
+            "stop"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3 - recup des statiques de toutes les utilisation",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"password\": \"FERFE@z#85241zefFDSF\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://statousapp.fluxasync.pro/api/admin/stats",
+          "protocol": "https",
+          "host": [
+            "statousapp",
+            "fluxasync",
+            "pro"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "stats"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
